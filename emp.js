@@ -47,16 +47,17 @@ femaleEmp.addEventListener('click',()=>
 let str='';
 search.addEventListener('keyup',()=>
 {
-	let name=search.innerText;
-	for(let i=0;i<name.length;i++)
+	let textEntered=search.value;
+	if(textEntered.length>=1 && textEntered.trim())
 	{
-		for(let emp of data)
+		let filteredEmp=data.filter((empl)=>
 		{
-			if(name[i]===data.firstname[i])
-			{
-				str+=name[i]+'\n';
-			}
-		}
+			return empl.firstname.toLowerCase().trim().startsWith(textEntered.toLowerCase().trim());
+		});
+		displayAllEmp(filteredEmp);
 	}
-	displayAllEmp(str);
+	else
+	{
+		displayAllEmp([]);
+	}
 });
