@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employees</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="mdb/css/bootstrap.css">
+	<link rel="stylesheet" href="mdb/css/mdb.css">
+</head>
+<body>
+	<nav id="nav-bar" class="p-4 text-center">
+		<button id="all-emp" class="btn bg-secondary text-white">All Employees</button>
+		<button id="male-emp" class="btn bg-secondary text-white">Male Employees</button>
+		<button id="female-emp" class="btn bg-secondary text-white">Female Employees</button>
+	</nav>
+	<input type="text" id="search" placeholder="Search Employee...">
+	<h4 id="text"></h4>
+	<div class="container ml-6">	
+		<table class="table" border="3">
+			<thead>
+				<tr class="table-secondary text-secondary">
+					<th>SNO</th>
+					<th>FIRST NAME</th>
+					<th>LAST NAME</th>
+					<th>EMAIL</th>
+					<th>GENDER</th>
+					<th>COUNTRY</th>
+				</tr>
+			</thead>
+			<tbody id="data">
+			</tbody>	
+		</table>
+	</div>
+	<script src="employeedata.js"></script>
+	<script src="emp.js"></script>
+</body>
+</html>
